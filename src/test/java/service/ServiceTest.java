@@ -53,6 +53,9 @@ class ServiceTest {
 
     @org.junit.jupiter.api.Test
     void saveStudent() {
+        int result = service.saveStudent("11", "John", 1);
+        assertTrue(result == 1);
+        service.deleteStudent("11");
     }
 
     @org.junit.jupiter.api.Test
@@ -71,6 +74,9 @@ class ServiceTest {
 
     @org.junit.jupiter.api.Test
     void deleteStudent() {
+        int result = service.deleteStudent("4");
+        assertTrue(result == 0);
+        service.saveStudent("4", "Ion", 227);
     }
 
     @org.junit.jupiter.api.Test
@@ -79,6 +85,8 @@ class ServiceTest {
 
     @org.junit.jupiter.api.Test
     void updateStudent() {
+        int result = service.updateStudent("2", "Bella", 22);
+        assertTrue(result == 0);
     }
 
     @org.junit.jupiter.api.Test
