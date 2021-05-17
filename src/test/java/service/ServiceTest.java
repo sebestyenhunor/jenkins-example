@@ -81,6 +81,9 @@ class ServiceTest {
 
     @org.junit.jupiter.api.Test
     void deleteHomework() {
+        int result = service.deleteHomework("1");
+        assertTrue(result == 0);
+        service.saveHomework("1", "File", 7, 6);
     }
 
     @org.junit.jupiter.api.Test
@@ -91,6 +94,8 @@ class ServiceTest {
 
     @org.junit.jupiter.api.Test
     void updateHomework() {
+        int result = service.updateHomework("2", "Other", 7, 7);
+        assertTrue(result == 0);
     }
 
     @org.junit.jupiter.api.Test
