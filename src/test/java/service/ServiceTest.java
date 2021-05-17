@@ -105,6 +105,12 @@ class ServiceTest {
     }
 
     @org.junit.jupiter.api.Test
+    void updateHomeworkValidData() {
+        int result = service.updateHomework("3", "Other2", 7, 7);
+        assertTrue(result == 0);
+    }
+
+    @org.junit.jupiter.api.Test
     void extendDeadline() {
     }
 
